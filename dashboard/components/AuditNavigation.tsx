@@ -10,9 +10,14 @@ interface AuditNavigationProps {
 
 export default function AuditNavigation({
   currentSlug,
-  allAudits,
+  allAudits = [],
 }: AuditNavigationProps) {
   const router = useRouter();
+
+  // Guard against undefined or empty audits array
+  if (!allAudits || allAudits.length === 0) {
+    return null;
+  }
 
   const currentIndex = allAudits.findIndex(
     (audit) => audit.metadata.slug === currentSlug

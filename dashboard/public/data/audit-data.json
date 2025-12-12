@@ -1,17 +1,18 @@
 {
   "metadata": {
-    "brand": "beehiiv",
-    "category": "email CRM and Newsletter platforms",
-    "date": "November 7, 2025",
-    "transformedAt": "2025-11-07T19:55:29.889Z"
+    "brand": "Nover Marketing",
+    "category": "AEC (Architecture, Engineering & Construction) Marketing Agency",
+    "date": "December 9, 2025",
+    "website": "novermarketing.com",
+    "transformedAt": "2025-12-09T12:00:00.000Z"
   },
   "summary": {
-    "overallScore": 8.8,
-    "trustNodeCoverage": 17,
-    "trustNodeTotal": 22,
-    "trustNodePercentage": 77,
-    "citationQuality": 8.6,
-    "aiCitationRate": 100
+    "overallScore": 5.2,
+    "trustNodeCoverage": 4,
+    "trustNodeTotal": 29,
+    "trustNodePercentage": 14,
+    "citationQuality": 6.2,
+    "aiCitationRate": 33
   },
   "trustNodes": {
     "categories": [
@@ -19,93 +20,499 @@
         "name": "Knowledge Graphs",
         "coverage": 0,
         "total": 3,
-        "status": "✗ CRITICAL GAP"
+        "status": "Critical"
       },
       {
         "name": "Review Platforms",
-        "coverage": 5,
+        "coverage": 0,
         "total": 5,
-        "status": "✓ STRONG"
+        "status": "Critical"
       },
       {
         "name": "Directories",
-        "coverage": 3,
+        "coverage": 0,
         "total": 4,
-        "status": "✓ GOOD"
+        "status": "Critical"
       },
       {
         "name": "Company Profiles",
-        "coverage": 3,
-        "total": 3,
-        "status": "✓ STRONG"
+        "coverage": 1,
+        "total": 2,
+        "status": "Weak"
       },
       {
         "name": "News & PR",
-        "coverage": 1,
-        "total": 1,
-        "status": "✓ GOOD"
+        "coverage": 3,
+        "total": 10,
+        "status": "Weak"
       },
       {
         "name": "Seed Sites",
-        "coverage": 3,
+        "coverage": 0,
         "total": 5,
-        "status": "⚠️ MODERATE"
+        "status": "Critical"
       }
     ],
     "overall": {
-      "coverage": 17,
-      "total": 22,
-      "percentage": 77
-    }
+      "coverage": 4,
+      "total": 29,
+      "percentage": 14
+    },
+    "nodes": [
+      {"category": "Knowledge Graph", "name": "Wikipedia", "present": false, "qualityScore": null, "url": null, "notes": "No Wikipedia article - critical gap for LLM visibility"},
+      {"category": "Knowledge Graph", "name": "Wikidata", "present": false, "qualityScore": null, "url": null, "notes": "No Wikidata entry - missing structured entity data"},
+      {"category": "Knowledge Graph", "name": "Google Knowledge Panel", "present": false, "qualityScore": null, "url": null, "notes": "No knowledge panel - limited entity recognition"},
+      {"category": "Review Platform", "name": "G2", "present": false, "qualityScore": null, "url": null, "notes": "No G2 profile - critical gap for Perplexity visibility"},
+      {"category": "Review Platform", "name": "Capterra", "present": false, "qualityScore": null, "url": null, "notes": "No Capterra profile"},
+      {"category": "Review Platform", "name": "Trustpilot", "present": false, "qualityScore": null, "url": null, "notes": "No Trustpilot profile"},
+      {"category": "Review Platform", "name": "Software Advice", "present": false, "qualityScore": null, "url": null, "notes": "No profile"},
+      {"category": "Review Platform", "name": "GetApp", "present": false, "qualityScore": null, "url": null, "notes": "No profile"},
+      {"category": "Directory", "name": "Crunchbase", "present": false, "qualityScore": null, "url": null, "notes": "No Crunchbase - recommended to create"},
+      {"category": "Directory", "name": "Product Hunt", "present": false, "qualityScore": null, "url": null, "notes": "No profile - less relevant for service agency"},
+      {"category": "Directory", "name": "AngelList", "present": false, "qualityScore": null, "url": null, "notes": "No profile"},
+      {"category": "Directory", "name": "BuiltWith", "present": false, "qualityScore": null, "url": null, "notes": "No profile"},
+      {"category": "Company Profile", "name": "LinkedIn Company", "present": true, "qualityScore": 8.0, "url": "https://www.linkedin.com/company/nover-marketing", "notes": "Active profile, ~8 employees, hiring posts visible"},
+      {"category": "Company Profile", "name": "Bloomberg", "present": false, "qualityScore": null, "url": null, "notes": "No Bloomberg coverage - typical for small agency"},
+      {"category": "News & PR", "name": "Evergreen Award PR", "present": true, "qualityScore": 5.2, "url": "https://www.financialcontent.com/article/marketersmedia-2025-11-2-nover-marketing-named-best-construction-marketing-agency-in-the-us-for-2025", "notes": "Press release - drove ChatGPT #1 ranking"},
+      {"category": "News & PR", "name": "Barchart PR", "present": true, "qualityScore": 5.2, "url": "https://www.barchart.com/story/news/35849952/nover-marketing-named-best-construction-marketing-agency-in-the-us-for-2025", "notes": "Syndicated press release"},
+      {"category": "News & PR", "name": "NewsBreak PR", "present": true, "qualityScore": 4.8, "url": "https://www.newsbreak.com/dmr-news-321522575/4327042413477-nover-marketing-named-best-construction-marketing-agency-in-the-us-for-2025", "notes": "Syndicated press release"},
+      {"category": "News & PR", "name": "Google News", "present": false, "qualityScore": null, "url": null, "notes": "No earned media coverage"},
+      {"category": "News & PR", "name": "Industry Publications", "present": false, "qualityScore": null, "url": null, "notes": "No ENR, Construction Dive coverage"},
+      {"category": "Seed Site", "name": "TechCrunch", "present": false, "qualityScore": null, "url": null, "notes": "No TechCrunch coverage"},
+      {"category": "Seed Site", "name": "VentureBeat", "present": false, "qualityScore": null, "url": null, "notes": "No VentureBeat coverage"},
+      {"category": "Seed Site", "name": "Forbes", "present": false, "qualityScore": null, "url": null, "notes": "No Forbes coverage"},
+      {"category": "Seed Site", "name": "Inc.com", "present": false, "qualityScore": null, "url": null, "notes": "No Inc.com coverage"},
+      {"category": "Seed Site", "name": "Fast Company", "present": false, "qualityScore": null, "url": null, "notes": "No Fast Company coverage"}
+    ],
+    "alternativeNodes": [
+      {"category": "Alternative - Directory", "name": "Clutch", "present": true, "qualityScore": 7.6, "url": "https://clutch.co/profile/nover-marketing", "notes": "Key agency directory - profile present"},
+      {"category": "Alternative - Directory", "name": "The Manifest", "present": true, "qualityScore": 6.8, "url": "https://themanifest.com/company/nover-marketing", "notes": "Clutch sister site"},
+      {"category": "Alternative - Directory", "name": "ZoomInfo", "present": true, "qualityScore": 7.2, "url": "https://www.zoominfo.com/c/nover-marketing/541331255", "notes": "Business intelligence profile"},
+      {"category": "Alternative - Review", "name": "Birdeye", "present": true, "qualityScore": 6.4, "url": "https://reviews.birdeye.com/nover-marketing-170901714919567", "notes": "14 reviews, 5 stars - UNCLAIMED"},
+      {"category": "Alternative - Review", "name": "Yelp", "present": true, "qualityScore": 6.2, "url": "https://www.yelp.com/biz/nover-marketing-basalt-2", "notes": "Listed in Basalt, CO"},
+      {"category": "Alternative - Trust", "name": "BBB", "present": true, "qualityScore": 6.2, "url": "https://www.bbb.org/us/co/carbondale/profile/design/nover-marketing-0805-46145700", "notes": "Listed but NOT BBB Accredited"}
+    ]
   },
   "citationQuality": {
-    "overall": 8.6,
+    "overall": 6.2,
     "dimensions": {
-      "authority": 9,
-      "dataStructure": 8.7,
-      "brandAlignment": 9.3,
-      "freshness": 8.1,
-      "crossLinks": 7.9
-    }
+      "authority": 5.9,
+      "dataStructure": 6.2,
+      "brandAlignment": 7.3,
+      "freshness": 7.4,
+      "crossLinks": 4.4
+    },
+    "citations": [
+      {
+        "sourceUrl": "https://www.linkedin.com/company/nover-marketing",
+        "sourceName": "LinkedIn Company Page",
+        "sourceDomain": "linkedin.com",
+        "sourceType": "Company Profile",
+        "authorityScore": 8.0,
+        "dataStructureScore": 9.0,
+        "brandAlignmentScore": 8.0,
+        "freshnessScore": 8.0,
+        "crossLinkScore": 7.0,
+        "compositeScore": 8.0,
+        "citedByPerplexity": false,
+        "citedByChatGPT": false,
+        "citedByGemini": false,
+        "strengths": ["Tier-1 authority platform", "Active company page", "Team members listed"],
+        "weaknesses": ["Small company size (~8 employees)"],
+        "notes": "Strongest citation - high authority, structured data, active posting"
+      },
+      {
+        "sourceUrl": "https://clutch.co/profile/nover-marketing",
+        "sourceName": "Clutch Agency Profile",
+        "sourceDomain": "clutch.co",
+        "sourceType": "Directory",
+        "authorityScore": 8.0,
+        "dataStructureScore": 8.0,
+        "brandAlignmentScore": 8.0,
+        "freshnessScore": 7.0,
+        "crossLinkScore": 7.0,
+        "compositeScore": 7.6,
+        "citedByPerplexity": false,
+        "citedByChatGPT": false,
+        "citedByGemini": false,
+        "strengths": ["Key agency directory", "Verified reviews possible", "AEC category presence"],
+        "weaknesses": ["Needs more verified client reviews"],
+        "notes": "Important for agency discovery - drive more reviews for ranking"
+      },
+      {
+        "sourceUrl": "https://www.zoominfo.com/c/nover-marketing/541331255",
+        "sourceName": "ZoomInfo Business Profile",
+        "sourceDomain": "zoominfo.com",
+        "sourceType": "Business Intelligence",
+        "authorityScore": 7.0,
+        "dataStructureScore": 8.0,
+        "brandAlignmentScore": 7.0,
+        "freshnessScore": 8.0,
+        "crossLinkScore": 6.0,
+        "compositeScore": 7.2,
+        "citedByPerplexity": false,
+        "citedByChatGPT": false,
+        "citedByGemini": false,
+        "strengths": ["Business intelligence platform", "Technology stack tracked", "Competitor data"],
+        "weaknesses": ["Passive profile - limited control"],
+        "notes": "Useful for B2B discovery and competitive intelligence"
+      },
+      {
+        "sourceUrl": "https://novermarketing.com/",
+        "sourceName": "Nover Marketing Official Website",
+        "sourceDomain": "novermarketing.com",
+        "sourceType": "Brand Website",
+        "authorityScore": 6.0,
+        "dataStructureScore": 7.0,
+        "brandAlignmentScore": 9.0,
+        "freshnessScore": 8.0,
+        "crossLinkScore": 5.0,
+        "compositeScore": 7.0,
+        "citedByPerplexity": true,
+        "citedByChatGPT": false,
+        "citedByGemini": false,
+        "strengths": ["Canonical brand source", "Clear service positioning", "AEC focus messaging"],
+        "weaknesses": ["Limited external authority as small agency"],
+        "notes": "Well-positioned website with clear AEC specialization"
+      },
+      {
+        "sourceUrl": "https://themanifest.com/company/nover-marketing",
+        "sourceName": "The Manifest Profile",
+        "sourceDomain": "themanifest.com",
+        "sourceType": "Directory",
+        "authorityScore": 7.0,
+        "dataStructureScore": 7.0,
+        "brandAlignmentScore": 7.0,
+        "freshnessScore": 7.0,
+        "crossLinkScore": 6.0,
+        "compositeScore": 6.8,
+        "citedByPerplexity": false,
+        "citedByChatGPT": false,
+        "citedByGemini": false,
+        "strengths": ["Clutch sister site", "Agency directory presence"],
+        "weaknesses": ["Secondary to Clutch"],
+        "notes": "Complements Clutch profile"
+      },
+      {
+        "sourceUrl": "https://reviews.birdeye.com/nover-marketing-170901714919567",
+        "sourceName": "Birdeye Reviews",
+        "sourceDomain": "birdeye.com",
+        "sourceType": "Review Platform",
+        "authorityScore": 6.0,
+        "dataStructureScore": 6.0,
+        "brandAlignmentScore": 9.0,
+        "freshnessScore": 7.0,
+        "crossLinkScore": 4.0,
+        "compositeScore": 6.4,
+        "citedByPerplexity": false,
+        "citedByChatGPT": false,
+        "citedByGemini": false,
+        "strengths": ["14 reviews with 5-star rating", "Strong customer sentiment"],
+        "weaknesses": ["Profile unclaimed", "Less authority than G2/Capterra"],
+        "notes": "CLAIM THIS PROFILE - 14 reviews with perfect rating already exist"
+      },
+      {
+        "sourceUrl": "https://www.bbb.org/us/co/carbondale/profile/design/nover-marketing-0805-46145700",
+        "sourceName": "BBB Profile",
+        "sourceDomain": "bbb.org",
+        "sourceType": "Trust Organization",
+        "authorityScore": 7.0,
+        "dataStructureScore": 7.0,
+        "brandAlignmentScore": 6.0,
+        "freshnessScore": 6.0,
+        "crossLinkScore": 5.0,
+        "compositeScore": 6.2,
+        "citedByPerplexity": true,
+        "citedByChatGPT": false,
+        "citedByGemini": false,
+        "strengths": ["Trust organization presence", "A- rating"],
+        "weaknesses": ["Not BBB accredited", "Basic profile only"],
+        "notes": "Perplexity cites this for brand validation"
+      },
+      {
+        "sourceUrl": "https://www.yelp.com/biz/nover-marketing-basalt-2",
+        "sourceName": "Yelp Business Listing",
+        "sourceDomain": "yelp.com",
+        "sourceType": "Review Platform",
+        "authorityScore": 7.0,
+        "dataStructureScore": 8.0,
+        "brandAlignmentScore": 6.0,
+        "freshnessScore": 5.0,
+        "crossLinkScore": 5.0,
+        "compositeScore": 6.2,
+        "citedByPerplexity": false,
+        "citedByChatGPT": false,
+        "citedByGemini": false,
+        "strengths": ["High platform authority", "Local presence"],
+        "weaknesses": ["Limited activity", "B2C focused platform"],
+        "notes": "Less relevant for B2B agency but provides local presence"
+      },
+      {
+        "sourceUrl": "https://www.financialcontent.com/article/marketersmedia-2025-11-2-nover-marketing-named-best-construction-marketing-agency-in-the-us-for-2025",
+        "sourceName": "Evergreen Award Press Release",
+        "sourceDomain": "financialcontent.com",
+        "sourceType": "Press Release",
+        "authorityScore": 4.0,
+        "dataStructureScore": 4.0,
+        "brandAlignmentScore": 7.0,
+        "freshnessScore": 9.0,
+        "crossLinkScore": 2.0,
+        "compositeScore": 5.2,
+        "citedByPerplexity": false,
+        "citedByChatGPT": true,
+        "citedByGemini": false,
+        "strengths": ["2025 timestamp", "Third-party award mention", "Specific achievement claim"],
+        "weaknesses": ["Low domain authority", "PR syndication not editorial"],
+        "notes": "KEY CITATION - This drove ChatGPT #1 ranking despite low authority"
+      }
+    ]
   },
   "llmRankings": [
     {
       "platform": "Perplexity",
-      "cited": "✓",
-      "position": "#1",
-      "citations": "24"
+      "cited": false,
+      "position": null,
+      "positionDisplay": "Not Ranked",
+      "citations": 7
     },
     {
       "platform": "ChatGPT",
-      "cited": "✓",
-      "position": "#1",
-      "citations": "12"
+      "cited": true,
+      "position": 1,
+      "positionDisplay": "#1",
+      "citations": 6
     },
     {
       "platform": "Gemini",
-      "cited": "✓",
-      "position": "#1 (category)",
-      "citations": "2"
+      "cited": false,
+      "position": null,
+      "positionDisplay": "Not Ranked",
+      "citations": 4
+    }
+  ],
+  "llmResponses": [
+    {
+      "platform": "Perplexity",
+      "queryType": "Evaluative",
+      "queryText": "What are the top AEC marketing agencies in the US in 2025?",
+      "brandMentioned": false,
+      "brandPosition": null,
+      "brandDescription": null,
+      "competitorsMentioned": ["CVG Strategy", "Tank Design", "The Bokka Group", "Third and Arch", "Industrial Strength Marketing", "Elevate Marketing Advisors", "GoStrategies"],
+      "citationsFound": [
+        "https://www.thirdandarch.com/thoughts/2025-aec-marketing-trends/",
+        "https://zweiggroup.com/blogs/news/zweig-group-announces-the-2025-hot-firm-list"
+      ],
+      "responseSummary": "Comprehensive list of AEC specialists without Nover Marketing. Perplexity prioritizes agencies with G2 profiles and industry publication coverage.",
+      "sentiment": "not_mentioned"
+    },
+    {
+      "platform": "Perplexity",
+      "queryType": "Comparative",
+      "queryText": "Best construction marketing agency for contractors in 2025",
+      "brandMentioned": false,
+      "brandPosition": null,
+      "brandDescription": null,
+      "competitorsMentioned": ["Hook Agency", "Venveo", "Contractor Growth Network", "Blue Corona/RYNO", "BuildWitt", "On The Map Marketing"],
+      "citationsFound": [
+        "https://hookagency.com/blog/construction-marketing-agencies/",
+        "https://www.venveo.com/blog/construction-marketing-agencies"
+      ],
+      "responseSummary": "Focused on contractor/builder agencies. Nover's AEC focus is broader (architecture, engineering) vs. construction-only competitors.",
+      "sentiment": "not_mentioned"
+    },
+    {
+      "platform": "Perplexity",
+      "queryType": "Brand-Specific",
+      "queryText": "Nover Marketing reviews and credentials",
+      "brandMentioned": true,
+      "brandPosition": 1,
+      "brandDescription": "Specialized AEC marketing firm founded in 2018 by Tiff Quillan. Full-service digital marketing agency with analytics-based approach. Small, fully remote US team. Year-long recurring retainers. A- BBB rating.",
+      "competitorsMentioned": [],
+      "citationsFound": [
+        "https://novermarketing.com/",
+        "https://novermarketing.com/services/",
+        "https://novermarketing.com/clients/engineering/",
+        "https://www.bbb.org/us/co/carbondale/profile/design/nover-marketing-0805-46145700",
+        "https://4dayweek.io/company/nover-marketing/jobs"
+      ],
+      "responseSummary": "Perplexity knows the brand well when asked directly. Assembled comprehensive profile from website and third-party sources. Positive portrayal.",
+      "sentiment": "positive"
+    },
+    {
+      "platform": "ChatGPT",
+      "queryType": "Evaluative",
+      "queryText": "What are the top AEC marketing agencies in the US in 2025?",
+      "brandMentioned": true,
+      "brandPosition": 1,
+      "brandDescription": "Named Best Construction Marketing Agency in the US for 2025 by the Evergreen Awards. Their focus is AEC companies, combining traditional and digital marketing for measurable growth. Recommended as top choice for balanced, full-service AEC-specialist with proven 2025 performance recognition.",
+      "competitorsMentioned": ["Siana Marketing", "Third & Arch", "Archmark", "Amra & Elma", "Bizop Media", "Reputation Ink"],
+      "citationsFound": [
+        "https://www.financialcontent.com/article/marketersmedia-2025-11-2-nover-marketing-named-best-construction-marketing-agency-in-the-us-for-2025",
+        "https://www.sianamarketing.com/resources/the-top-architecture-geo-aeo-agencies-of-2025",
+        "https://www.thirdandarch.com/",
+        "https://www.archmark.co/",
+        "https://www.amraandelma.com/architecture-marketing-firms/"
+      ],
+      "responseSummary": "RANKED #1! ChatGPT heavily weighted the Evergreen Award press release. Only agency with third-party award recognition in the results.",
+      "sentiment": "very_positive",
+      "specialNote": "Press release strategy proved highly effective for ChatGPT visibility"
+    },
+    {
+      "platform": "Gemini",
+      "queryType": "Evaluative",
+      "queryText": "What are the top AEC marketing agencies in the US in 2025?",
+      "brandMentioned": false,
+      "brandPosition": null,
+      "brandDescription": null,
+      "competitorsMentioned": ["Industrial Brand", "Reputation Ink", "Markitecture", "REVX Marketing", "Industrial Strength Marketing", "First Page Sage", "Thrive Internet Marketing", "SmartSites", "Straight North"],
+      "citationsFound": [
+        "https://www.ravetree.com/blog/top-10-marketing-agencies-for-architecture-firms"
+      ],
+      "responseSummary": "Gemini relied entirely on single 2023 Ravetree listicle. All 4 citations point to same source. Nover not in that article = not surfaced.",
+      "sentiment": "not_mentioned",
+      "specialNote": "To appear on Gemini, need inclusion in Ravetree or similar listicle articles"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Third and Arch",
+      "perplexity": "Mentioned",
+      "chatgpt": "#3",
+      "gemini": "-"
+    },
+    {
+      "name": "Siana Marketing",
+      "perplexity": "-",
+      "chatgpt": "#2",
+      "gemini": "-"
+    },
+    {
+      "name": "Industrial Brand",
+      "perplexity": "-",
+      "chatgpt": "-",
+      "gemini": "#1"
+    },
+    {
+      "name": "Reputation Ink",
+      "perplexity": "-",
+      "chatgpt": "#7",
+      "gemini": "#2"
+    },
+    {
+      "name": "Nover Marketing",
+      "perplexity": "-",
+      "chatgpt": "#1",
+      "gemini": "-"
     }
   ],
   "priorities": [
     {
       "level": "Immediate",
-      "title": "Create Wikipedia Article",
-      "action": "",
-      "timeline": ""
+      "title": "Create Crunchbase Profile",
+      "description": "Establish presence in business intelligence ecosystem - LLMs reference Crunchbase for company validation",
+      "action": "Create free Crunchbase profile with complete company info, services, team",
+      "impact": "High",
+      "effort": "Low",
+      "timeline": "2 weeks"
     },
     {
       "level": "Immediate",
-      "title": "Implement Organization/Product Schema on beehiiv.com",
-      "action": "",
-      "timeline": ""
+      "title": "Claim and Populate G2 Profile",
+      "description": "Critical for Perplexity visibility - they heavily cite G2 for agency recommendations",
+      "action": "Create G2 profile for marketing agencies category, request 5+ client reviews",
+      "impact": "High",
+      "effort": "Medium",
+      "timeline": "30 days"
     },
     {
       "level": "Immediate",
-      "title": "Update Outdated TechCrunch Coverage",
-      "action": "",
-      "timeline": ""
+      "title": "Claim Birdeye Profile",
+      "description": "14 reviews with 5-star rating already exist - claiming allows management and structured data optimization",
+      "action": "Claim profile, respond to reviews, add complete business info",
+      "impact": "Medium",
+      "effort": "Low",
+      "timeline": "1 week"
+    },
+    {
+      "level": "Strategic",
+      "title": "Get Featured in Industry Listicles",
+      "description": "Gemini relies heavily on 'Top X' listicle articles - need inclusion for visibility",
+      "action": "Pitch to Ravetree, Agency Spotter, DesignRush for inclusion in agency rankings",
+      "impact": "High",
+      "effort": "Medium",
+      "timeline": "This quarter"
+    },
+    {
+      "level": "Strategic",
+      "title": "Improve Citation Authority",
+      "description": "Current authority score 5.9/10 - need higher-authority sources",
+      "action": "Get coverage in ENR, Construction Dive, or other AEC industry publications",
+      "impact": "High",
+      "effort": "High",
+      "timeline": "This quarter"
+    },
+    {
+      "level": "Long-term",
+      "title": "Build Wikipedia Notability",
+      "description": "Foundational for knowledge graph presence across all LLMs",
+      "action": "Earn media coverage sufficient for Wikipedia article creation (requires third-party sources)",
+      "impact": "High",
+      "effort": "High",
+      "timeline": "6-12 months"
     }
-  ]
+  ],
+  "gaps": {
+    "critical": [
+      "No Wikipedia article - blocks knowledge graph presence entirely",
+      "No G2/Capterra profiles - critical gap for Perplexity visibility",
+      "No Crunchbase profile - missing from business intelligence ecosystem",
+      "Not featured in industry listicles (Ravetree) - invisible to Gemini",
+      "No earned media coverage - only syndicated press releases"
+    ],
+    "impact": "Strong ChatGPT visibility (#1) through PR strategy, but Perplexity and Gemini gaps limit overall AI visibility to 33%. Without G2 profile and listicle coverage, cannot compete on 2 of 3 major platforms."
+  },
+  "causalChain": {
+    "explanation": "Trust Nodes → Citation Quality → LLM Visibility",
+    "chains": [
+      {
+        "step1": "No G2/Capterra profiles",
+        "step2": "No B2B review authority signals",
+        "step3": "Perplexity excludes from 'best agencies' lists",
+        "insight": "Perplexity heavily prioritizes G2 reviews for agency recommendations"
+      },
+      {
+        "step1": "Not in Ravetree listicle",
+        "step2": "Gemini can't find brand in sources",
+        "step3": "Zero Gemini visibility",
+        "insight": "Gemini relied entirely on single 2023 Ravetree article - need listicle inclusion"
+      },
+      {
+        "step1": "Evergreen Award PR distributed",
+        "step2": "FinancialContent picked up story",
+        "step3": "ChatGPT ranks brand #1",
+        "insight": "PR strategy highly effective for ChatGPT - award + 2025 timestamp drove top position"
+      }
+    ]
+  },
+  "companyInfo": {
+    "founded": "2018",
+    "founder": "Tiffany Quillan",
+    "headquarters": "Carbondale, CO",
+    "companySize": "8 employees",
+    "industry": "Marketing Agency",
+    "specialization": "AEC (Architecture, Engineering & Construction) marketing",
+    "differentiators": ["4-day work week", "No white-labeling", "Analytics-based approach", "Year-long retainers"]
+  },
+  "reauditSchedule": {
+    "nextAuditDate": "February 7, 2025",
+    "frequency": "Every 60 days",
+    "milestones": [
+      "Crunchbase profile created and indexed",
+      "G2 profile live with 3+ reviews",
+      "Birdeye profile claimed",
+      "1+ industry listicle inclusion",
+      "ChatGPT #1 position maintained"
+    ]
+  }
 }

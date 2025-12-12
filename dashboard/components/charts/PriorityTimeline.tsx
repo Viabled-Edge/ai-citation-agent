@@ -1,7 +1,6 @@
 'use client';
 
 import type { Priorities } from '@/lib/parser/types';
-import { getPriorityColor, getImpactColor } from '@/lib/utils';
 
 interface PriorityTimelineProps {
   data: Priorities;
@@ -15,28 +14,27 @@ export default function PriorityTimeline({ data }: PriorityTimelineProps) {
   ];
 
   return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h3 className="text-lg font-semibold">Strategic Priorities</h3>
-        <div className="text-sm text-gray-600">
-          {allPriorities.length} total actions
+    <div className="card p-6 print-avoid-break">
+      <div className="section-header">
+        <h3 className="section-title">Strategic Priorities</h3>
+        <div className="badge badge-neutral">
+          {allPriorities.length} actions
         </div>
       </div>
 
       {/* Priority Sections */}
-      <div className="space-y-6">
+      <div className="space-y-8">
         {/* Immediate Priorities */}
         {data.immediate.length > 0 && (
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-red-800">
-                🔴 Immediate
-              </span>
-              <span className="text-sm text-gray-600">This Month</span>
+          <div className="print-avoid-break">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <span className="font-semibold text-primary">Immediate</span>
+              <span className="text-xs text-muted uppercase tracking-wider">This Month</span>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-3 ml-6 border-l-2 border-red-200 pl-4">
               {data.immediate.map((priority, index) => (
-                <PriorityCard key={index} priority={priority} />
+                <PriorityCard key={index} priority={priority} type="immediate" />
               ))}
             </div>
           </div>
@@ -44,16 +42,15 @@ export default function PriorityTimeline({ data }: PriorityTimelineProps) {
 
         {/* Strategic Initiatives */}
         {data.strategic.length > 0 && (
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
-                🟡 Strategic
-              </span>
-              <span className="text-sm text-gray-600">This Quarter</span>
+          <div className="print-avoid-break">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-3 h-3 rounded-full bg-amber-500"></div>
+              <span className="font-semibold text-primary">Strategic</span>
+              <span className="text-xs text-muted uppercase tracking-wider">This Quarter</span>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-3 ml-6 border-l-2 border-amber-200 pl-4">
               {data.strategic.map((priority, index) => (
-                <PriorityCard key={index} priority={priority} />
+                <PriorityCard key={index} priority={priority} type="strategic" />
               ))}
             </div>
           </div>
@@ -61,16 +58,15 @@ export default function PriorityTimeline({ data }: PriorityTimelineProps) {
 
         {/* Long-term Vision */}
         {data.longTerm.length > 0 && (
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
-                🟢 Long-term
-              </span>
-              <span className="text-sm text-gray-600">6-12 Months</span>
+          <div className="print-avoid-break">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
+              <span className="font-semibold text-primary">Long-term</span>
+              <span className="text-xs text-muted uppercase tracking-wider">6-12 Months</span>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-3 ml-6 border-l-2 border-emerald-200 pl-4">
               {data.longTerm.map((priority, index) => (
-                <PriorityCard key={index} priority={priority} />
+                <PriorityCard key={index} priority={priority} type="longterm" />
               ))}
             </div>
           </div>
@@ -80,40 +76,52 @@ export default function PriorityTimeline({ data }: PriorityTimelineProps) {
   );
 }
 
-function PriorityCard({ priority }: { priority: any }) {
+function PriorityCard({ priority, type }: { priority: any; type: 'immediate' | 'strategic' | 'longterm' }) {
+  const getImpactBadge = (impact: string) => {
+    const impactLower = impact?.toLowerCase() || '';
+    if (impactLower.includes('high') || impactLower.includes('critical')) {
+      return 'badge-danger';
+    }
+    if (impactLower.includes('medium') || impactLower.includes('moderate')) {
+      return 'badge-warning';
+    }
+    return 'badge-success';
+  };
+
   return (
-    <div className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
-      <div className="flex items-start justify-between gap-4">
-        <div className="flex-1">
-          <h4 className="font-semibold text-gray-900 mb-2">{priority.title}</h4>
+    <div className={`priority-card ${type}`}>
+      <h4 className="font-semibold text-primary mb-2">{priority.title}</h4>
 
-          {priority.currentStatus && (
-            <p className="text-sm text-gray-600 mb-2">
-              <span className="font-medium">Current:</span> {priority.currentStatus}
-            </p>
-          )}
+      {priority.currentStatus && (
+        <p className="text-sm text-muted mb-2">
+          <span className="font-medium text-secondary">Current:</span> {priority.currentStatus}
+        </p>
+      )}
 
-          <p className="text-sm text-gray-700 mb-3">{priority.action}</p>
+      <p className="text-sm text-secondary mb-3">{priority.action}</p>
 
-          <div className="flex flex-wrap gap-2">
-            <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ring-1 ring-inset ${getImpactColor(priority.impact)}`}>
-              {priority.impact} Impact
-            </span>
+      <div className="flex flex-wrap gap-2">
+        {priority.impact && (
+          <span className={`badge ${getImpactBadge(priority.impact)}`}>
+            {priority.impact} Impact
+          </span>
+        )}
 
-            {priority.timeline && (
-              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-700">
-                ⏱ {priority.timeline}
-              </span>
-            )}
-          </div>
-
-          {priority.successMetric && (
-            <p className="text-xs text-gray-500 mt-2">
-              <span className="font-medium">Success Metric:</span> {priority.successMetric}
-            </p>
-          )}
-        </div>
+        {priority.timeline && (
+          <span className="badge badge-neutral">
+            <svg className="w-3 h-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            {priority.timeline}
+          </span>
+        )}
       </div>
+
+      {priority.successMetric && (
+        <p className="text-xs text-muted mt-3 pt-3 border-t border-black/[0.04]">
+          <span className="font-medium">Success Metric:</span> {priority.successMetric}
+        </p>
+      )}
     </div>
   );
 }

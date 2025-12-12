@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "brand": "beehiiv",
-    "category": "email CRM and Newsletter platforms",
-    "date": "November 7, 2025",
-    "transformedAt": "2025-11-07T19:55:29.889Z"
+    "brand": "Voyageur Group",
+    "category": "Retail and ecommerce media agency",
+    "date": "December 8, 2025",
+    "transformedAt": "2025-12-08T22:47:53.338Z"
   },
   "summary": {
-    "overallScore": 8.8,
-    "trustNodeCoverage": 17,
-    "trustNodeTotal": 22,
-    "trustNodePercentage": 77,
-    "citationQuality": 8.6,
-    "aiCitationRate": 100
+    "overallScore": 3.8,
+    "trustNodeCoverage": 6,
+    "trustNodeTotal": 29,
+    "trustNodePercentage": 21,
+    "citationQuality": 6.5,
+    "aiCitationRate": 33
   },
   "trustNodes": {
     "categories": [
@@ -19,93 +19,158 @@
         "name": "Knowledge Graphs",
         "coverage": 0,
         "total": 3,
-        "status": "✗ CRITICAL GAP"
+        "status": "Critical"
       },
       {
         "name": "Review Platforms",
-        "coverage": 5,
+        "coverage": 0,
         "total": 5,
-        "status": "✓ STRONG"
+        "status": "Critical"
       },
       {
         "name": "Directories",
-        "coverage": 3,
+        "coverage": 1,
         "total": 4,
-        "status": "✓ GOOD"
+        "status": "Weak"
       },
       {
         "name": "Company Profiles",
-        "coverage": 3,
-        "total": 3,
-        "status": "✓ STRONG"
+        "coverage": 1,
+        "total": 2,
+        "status": "Partial"
       },
       {
         "name": "News & PR",
-        "coverage": 1,
-        "total": 1,
-        "status": "✓ GOOD"
+        "coverage": 3,
+        "total": 10,
+        "status": "Weak"
       },
       {
         "name": "Seed Sites",
-        "coverage": 3,
+        "coverage": 1,
         "total": 5,
-        "status": "⚠️ MODERATE"
+        "status": "Weak"
       }
     ],
     "overall": {
-      "coverage": 17,
-      "total": 22,
-      "percentage": 77
+      "coverage": 6,
+      "total": 29,
+      "percentage": 21
     }
   },
   "citationQuality": {
-    "overall": 8.6,
+    "overall": 6.5,
     "dimensions": {
-      "authority": 9,
-      "dataStructure": 8.7,
-      "brandAlignment": 9.3,
-      "freshness": 8.1,
-      "crossLinks": 7.9
+      "authority": 6.5,
+      "dataStructure": 6.7,
+      "brandAlignment": 7.3,
+      "freshness": 6.8,
+      "crossLinks": 5.3
     }
   },
   "llmRankings": [
     {
       "platform": "Perplexity",
-      "cited": "✓",
-      "position": "#1",
-      "citations": "24"
+      "cited": true,
+      "position": null,
+      "positionDisplay": "Brand query only",
+      "citations": 4
     },
     {
       "platform": "ChatGPT",
-      "cited": "✓",
-      "position": "#1",
-      "citations": "12"
+      "cited": false,
+      "position": null,
+      "positionDisplay": "Not mentioned",
+      "citations": 36
     },
     {
       "platform": "Gemini",
-      "cited": "✓",
-      "position": "#1 (category)",
-      "citations": "2"
+      "cited": false,
+      "position": null,
+      "positionDisplay": "Not mentioned",
+      "citations": 8
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Tinuiti",
+      "perplexity": "Mentioned",
+      "chatgpt": "-",
+      "gemini": "#1"
+    },
+    {
+      "name": "Advantage Solutions",
+      "perplexity": "-",
+      "chatgpt": "#1",
+      "gemini": "-"
+    },
+    {
+      "name": "Power Digital",
+      "perplexity": "#1",
+      "chatgpt": "#2",
+      "gemini": "-"
+    },
+    {
+      "name": "Cool Nerds Marketing",
+      "perplexity": "-",
+      "chatgpt": "-",
+      "gemini": "#2"
     }
   ],
   "priorities": [
     {
       "level": "Immediate",
-      "title": "Create Wikipedia Article",
-      "action": "",
-      "timeline": ""
+      "title": "Create G2 Agency Profile",
+      "description": "G2 is heavily cited by LLMs for 'best agency' queries",
+      "action": "Create G2 profile at g2.com/products/new, add company info, request reviews from 5-10 existing clients",
+      "impact": "High",
+      "effort": "Low",
+      "timeline": "30 days"
     },
     {
       "level": "Immediate",
-      "title": "Implement Organization/Product Schema on beehiiv.com",
-      "action": "",
-      "timeline": ""
+      "title": "Issue Press Release via GlobeNewswire",
+      "description": "ChatGPT prioritizes wire service press releases",
+      "action": "Issue press release about Inc. 5000 2025 recognition with specific metrics (428% growth, revenue, client count)",
+      "impact": "High",
+      "effort": "Low",
+      "timeline": "30 days"
     },
     {
       "level": "Immediate",
-      "title": "Update Outdated TechCrunch Coverage",
-      "action": "",
-      "timeline": ""
+      "title": "Submit to Agency Ranking Lists",
+      "description": "Both ChatGPT and Gemini heavily cite these sources",
+      "action": "Submit to DesignRush, Clutch, Amra and Elma agency directories",
+      "impact": "High",
+      "effort": "Medium",
+      "timeline": "30 days"
+    },
+    {
+      "level": "Strategic",
+      "title": "Build Wikipedia Article",
+      "description": "Foundational for knowledge graph presence across all LLMs",
+      "action": "Compile notability evidence from Inc. 5000 recognition and submit article",
+      "impact": "High",
+      "effort": "High",
+      "timeline": "90 days"
+    },
+    {
+      "level": "Strategic",
+      "title": "Pursue Industry Publication Coverage",
+      "description": "Target AdExchanger, Marketing Brew, Retail Dive",
+      "action": "Pitch thought leadership on retail media trends",
+      "impact": "High",
+      "effort": "Medium",
+      "timeline": "90 days"
     }
-  ]
+  ],
+  "gaps": {
+    "critical": [
+      "No Wikipedia article - blocks knowledge graph citations",
+      "No G2 profile - major gap for 'best agency' queries",
+      "No industry publication coverage (AdExchanger, Marketing Brew)",
+      "No press releases on wire services"
+    ],
+    "impact": "Without Wikipedia and G2, Voyageur Group cannot be cited as authoritative source by LLMs for category queries"
+  }
 }
