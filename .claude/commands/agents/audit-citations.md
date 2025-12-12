@@ -52,7 +52,7 @@ Let's run an AI visibility audit.
 
 3. **Do you have content URLs to analyze?** (optional)
 
-The audit will take approximately 8-10 minutes and cover:
+The audit will take approximately 20-25 minutes and cover:
 ✓ Step 1: Source & Citation Discovery
 ✓ Step 2: Citation Quality Scoring
 ✓ Step 3: LLM Response Evaluation (Perplexity, ChatGPT, Gemini)
@@ -524,17 +524,18 @@ Moving to Step 3...
 
 Evaluating how AI platforms cite [Brand]...
 
-Strategy: Query taxonomy across 3 platforms (OPTIMIZED)
-- Perplexity: 3 query types (API is fast)
-- ChatGPT: 1 query only (browser automation - Evaluative)
-- Gemini: 1 query only (browser automation - Evaluative)
+Strategy: Comprehensive query taxonomy across 3 platforms (7-8 queries each)
+- Perplexity: 7-8 queries via MCP API (~2-3 min)
+- ChatGPT: 7-8 queries in single browser session (~6-7 min)
+- Gemini: 7-8 queries in single browser session (~6-7 min)
 - Position tracking and citation mapping for all
-- Sequential execution for browser agents
+- Sequential platform execution, multi-query per session
 
-Query types available:
-1. Evaluative: "What are the top [category] in 2025?" ← PRIMARY (all platforms)
-2. Comparative: "Best [category] for [use case]" ← Perplexity only
-3. Brand-Specific: "[Brand] reviews and credentials" ← Perplexity only
+Query Distribution (reference: context/queries/expanded-taxonomy.md):
+- Evaluative (2): "What are the top [category] in 2025?", "Best rated [category] tools"
+- Comparative (2): "[Brand] vs [Competitor]", "Best [category] for [use case]"
+- Use-Case (2): "[Category] for [specific need]", "How to solve [problem] with [category]"
+- Brand-Specific (1-2): "[Brand] reviews", "[Brand] vs alternatives"
 
 ⚠️ IMPORTANT: Browser-based agents (ChatGPT, Gemini) automatically invoke @playwright-cleanup before starting.
 If you encounter endless tabs or browser issues, the browser agents will self-clean and report the issue.
@@ -542,25 +543,27 @@ If you encounter endless tabs or browser issues, the browser agents will self-cl
 
 ### Step 3a: Perplexity Evaluation
 ```
-🟢 Perplexity evaluation starting...
+🟢 Perplexity evaluation starting (7-8 queries via API)...
 
 @perplexity-citation-checker
 
 Brand: [Brand name]
 Topic: [Category]
+Industry: [Detected vertical from Step 1]
 
-Run these queries:
-1. Evaluative: "What are the top [category] in 2025?"
-2. Comparative: "Best [category] for [use case]"
-3. Brand-Specific: "[Brand] reviews and credentials"
+Run 7-8 queries per expanded taxonomy (context/queries/expanded-taxonomy.md):
+- 2 Evaluative: "What are the top [category] in 2025?", "Best rated [category] tools"
+- 2 Comparative: "[Brand] vs [Top Competitor]", "Best [category] for [primary use case]"
+- 2 Use-Case: "[Category] for [specific need]", "[Category] that helps with [problem]"
+- 1-2 Brand-Specific: "[Brand] reviews", "[Brand] alternatives"
 
 For each query:
 - Track if brand appears
-- Track position/ranking
-- Map citation sources
-- Note competitors cited
+- Track position/ranking (1-10 or unranked)
+- Map citation sources with URLs
+- Note all competitors mentioned
 
-Report comprehensive results with position tracking.
+Return structured JSON with all 7-8 query results plus summary metrics.
 ```
 
 **WAIT for Perplexity to complete.**
@@ -569,12 +572,13 @@ When complete:
 ```
 ✓ Perplexity evaluation complete
 
-Queries tested: 3
-Brand appeared in: [X] of 3 queries
+Queries tested: 7-8
+Brand appeared in: [X] of 8 queries
 Average position: [X or "Not ranked"]
-Citations supporting brand: [count]
+Total citations found: [count]
+Visibility rate: [X]%
 
-Key finding: [1 sentence]
+Key finding: [1 sentence summary]
 
 Moving to ChatGPT...
 ```
@@ -583,36 +587,41 @@ Moving to ChatGPT...
 
 ### Step 3b: ChatGPT Evaluation
 ```
-🔵 ChatGPT evaluation starting (browser automation)...
+🔵 ChatGPT evaluation starting (7-8 queries in single browser session)...
 
 @chatgpt-citation-checker
 
 Brand: [Brand name]
 Topic: [Category]
+Industry: [Detected vertical from Step 1]
 
-Query: "What are the top [category] in 2025?"
+Execute 7-8 queries in LOOP within single browser session:
+- 2 Evaluative: "What are the top [category] in 2025?", "Best [category] software"
+- 2 Comparative: "[Brand] vs [Competitor]", "Best [category] for [use case]"
+- 2 Use-Case: "[Category] for [specific need]", "How to [solve problem] with [category]"
+- 1-2 Brand-Specific: "[Brand] reviews", "Is [Brand] good for [use case]?"
 
-Complete full 9-step workflow:
-- Navigate, enable search, submit query
-- WAIT 20 seconds for web search (optimized from 30s)
-- Extract position, citations, competitors
-- Close browser
-- Report with position tracking
+Multi-query workflow (single browser session):
+1. Navigate once, enable search once
+2. LOOP: Submit query → Wait 20s → Extract → New chat
+3. Close browser only after ALL 7-8 queries complete
 
-Do NOT close browser until all steps complete.
+Return structured JSON with all query results plus summary.
 ```
 
-**WAIT for ChatGPT to complete.**
+**WAIT for ChatGPT to complete (~6-7 minutes for all queries).**
 
 When complete:
 ```
 ✓ ChatGPT evaluation complete
 
-Brand position: [#X or "Not mentioned"]
-Sources found: [count]
-Competitors ranked higher: [list top 3]
+Queries tested: 7-8
+Brand appeared in: [X] of 8 queries
+Average position: [X or "Not ranked"]
+Total citations found: [count]
+Visibility rate: [X]%
 
-Key finding: [1 sentence]
+Key finding: [1 sentence summary]
 
 Moving to Gemini...
 ```
@@ -621,38 +630,45 @@ Moving to Gemini...
 
 ### Step 3c: Gemini Evaluation
 ```
-🟣 Gemini evaluation starting (browser automation)...
+🟣 Gemini evaluation starting (7-8 queries in single browser session)...
 
 @gemini-citation-checker
 
 Brand: [Brand name]
 Topic: [Category]
+Industry: [Detected vertical from Step 1]
 
-Query: "What are the top [category] in 2025?"
+Execute 7-8 queries in LOOP within single browser session:
+- 2 Evaluative: "What are the top [category] in 2025?", "Best [category] tools"
+- 2 Comparative: "[Brand] vs [Competitor]", "Best [category] for [use case]"
+- 2 Use-Case: "[Category] for [specific need]", "[Category] recommendations for [problem]"
+- 1-2 Brand-Specific: "[Brand] review", "[Brand] alternatives comparison"
 
-Complete full workflow:
-- Navigate, submit query
-- WAIT 20 seconds (optimized from 30s)
-- Extract position, citations, competitors
-- Close browser
-- Report with position tracking
+Multi-query workflow (single browser session):
+1. Navigate once
+2. LOOP: Submit query → Wait 20s → Extract → Clear/new chat
+3. Close browser only after ALL 7-8 queries complete
+
+Return structured JSON with all query results plus summary.
 ```
 
-**WAIT for Gemini to complete.**
+**WAIT for Gemini to complete (~6-7 minutes for all queries).**
 
 When complete:
 ```
 ✓ Gemini evaluation complete
 
-Brand position: [#X or "Not mentioned"]
-Sources found: [count]
-Competitors ranked higher: [list top 3]
+Queries tested: 7-8
+Brand appeared in: [X] of 8 queries
+Average position: [X or "Not ranked"]
+Total citations found: [count]
+Visibility rate: [X]%
 
-Key finding: [1 sentence]
+Key finding: [1 sentence summary]
 
 ✓ Step 3 Complete: LLM Response Evaluation
 
-All platforms evaluated. Moving to synthesis...
+All 3 platforms evaluated (22-24 total queries). Moving to synthesis...
 ```
 
 ---
@@ -843,43 +859,50 @@ Example:
 
 ## STRATEGIC RECOMMENDATIONS
 
-### 🔴 IMMEDIATE PRIORITIES (This Month)
+**Reference:** Use templates from `context/recommendations/templates.md` for structured, actionable recommendations with outreach targets.
 
-Based on highest-impact gaps across all 3 steps:
+### 🔴 IMMEDIATE PRIORITIES (1-4 weeks)
 
-**Priority 1: [Specific Trust Node]**
-- Current status: [Missing/Incomplete]
-- Impact: Blocks [specific LLM behavior]
-- Action: [Specific step to establish this node]
-- Success metric: [How to measure]
-- Timeline: [Weeks]
+Based on highest-impact gaps across all 3 steps. Each recommendation should include evidence, specific actions, and outreach targets where applicable.
 
-**Priority 2: [Specific Citation Quality Fix]**
-- Current score: [X]/10
-- Impact: [How this affects LLM trust]
-- Action: [Specific improvement]
-- Success metric: [Target score]
-- Timeline: [Weeks]
+**Priority 1: [Action Title from Template]**
+- **Evidence:** [Specific finding - "Competitor X cited 15x from this source, brand has 0"]
+- **Action:** [Concrete steps from template]
+- **Outreach Target:** (if applicable)
+  - Site: [URL]
+  - Author/Contact: [Name]
+  - LinkedIn: [Profile URL if findable]
+  - Approach: [1-2 sentence script]
+- **Effort:** [Low/Medium/High] ([estimated hours])
+- **Expected Impact:** [Specific metric improvement]
 
-**Priority 3: [Specific Content/Positioning]**
-- Current gap: [What's missing]
-- Impact: [Which LLM queries this affects]
-- Action: [Content or update needed]
-- Success metric: [Visibility improvement]
-- Timeline: [Weeks]
+**Priority 2: [Action Title]**
+- **Evidence:** [From audit findings - cite specific competitor URLs/sources]
+- **Action:** [Steps - use Template 2-8 from templates.md as appropriate]
+- **Outreach Target:** [If applicable]
+- **Effort:** [Level]
+- **Expected Impact:** [Metric]
+
+**Priority 3: [Action Title]**
+- **Evidence:** [Specific gap identified]
+- **Action:** [Concrete steps]
+- **Outreach Target:** [If applicable]
+- **Effort:** [Level]
+- **Expected Impact:** [Metric]
 
 ---
 
-### 🟡 STRATEGIC INITIATIVES (This Quarter)
+### 🟡 STRATEGIC INITIATIVES (1-3 Months)
 
 **Build Missing Trust Node Categories:**
 
-[For each category with <50% coverage:]
+[For each category with <50% coverage - reference industry-definitions.md for industry-specific priorities:]
 - Category: [Name]
 - Current: [X]/[Y] nodes
 - Target: [Y]/[Y] nodes
-- Actions: [List specific nodes to establish]
-- Impact: [Expected visibility improvement]
+- Actions: [List specific nodes - prioritize Critical > High from industry definitions]
+- Outreach targets: [For community/directory nodes]
+- Expected Impact: [Visibility improvement]
 
 **Improve Citation Quality Dimensions:**
 
@@ -887,34 +910,40 @@ Based on highest-impact gaps across all 3 steps:
 - Dimension: [Name]
 - Current: [X]/10
 - Target: 8+/10
-- Actions: [Specific improvements]
-- Impact: [How this improves LLM trust]
+- Actions: [Specific improvements - reference competitor content that scores higher]
+- Expected Impact: [How this improves LLM trust]
 
-**Competitive Positioning:**
+**Competitive Content Gaps:**
 
-- Current ranking: [Position vs competitors]
-- Target: [Goal position]
-- Actions: [What to learn from competitors who rank higher]
-- Timeline: [Months]
+[For each highly-cited competitor source brand lacks:]
+- Competitor Source: [URL that drives their visibility]
+- Why it works: [What makes it citeable]
+- Action: Create equivalent content OR request inclusion
+- Template: [Reference Template 2, 3, or 4 from templates.md]
 
 ---
 
-### 🟢 LONG-TERM VISION (6-12 Months)
+### 🟢 LONG-TERM VISION (3-6 Months)
 
 **Category Leadership in AI Systems:**
 
-Goal: [Be cited by all 3 platforms for category queries]
+Goal: Appear in top 3 across all platforms for category queries
 
 Strategy:
-1. [Long-term trust node strategy]
-2. [Long-term content authority strategy]
-3. [Long-term competitive positioning]
+1. [Trust node strategy - fill Critical/High priority gaps per industry]
+2. [Content authority - match or exceed competitor citeable content]
+3. [Outreach program - systematic blog/publication inclusion requests]
 
 **Metrics to Track:**
-- Trust node coverage: [Current X% → Target 90%+]
-- Citation quality: [Current X/10 → Target 8.5+/10]
-- AI citation rate: [Current X% → Target 100%]
+- Trust node coverage: [Current X% → Target 80%+ of industry Critical nodes]
+- Citation quality: [Current X/10 → Target 8+/10]
+- AI visibility rate: [Current X% → Target 75%+ across 22 queries]
 - Average AI ranking: [Current #X → Target Top 3]
+
+**Recommendations to AVOID** (per templates.md):
+- Wikipedia creation (expensive, requires agencies, often rejected)
+- Vague "improve brand authority" without specific actions
+- Abstract "build knowledge graph presence" without concrete steps
 
 ---
 
@@ -935,25 +964,34 @@ Strategy:
 ## APPENDIX: Methodology Details
 
 **Step 1: Source & Citation Discovery**
-- 29 trust nodes evaluated across 6 categories
+- Industry-specific trust nodes evaluated (reference: context/trust-nodes/industry-definitions.md)
+- Core nodes (all industries): LinkedIn, Crunchbase, Google News, Company Blog
+- Industry-specific nodes prioritized by Critical > High > Medium
 - Web search used to verify presence
-- Coverage percentage calculated
+- Coverage percentage calculated against industry-relevant nodes
 
 **Step 2: Citation Quality Scoring**
 - 5 dimensions scored (Authority, Structure, Alignment, Freshness, Cross-Links)
 - Citations fetched and analyzed
-- Composite scores calculated
+- Composite scores calculated (0-10 scale)
 
 **Step 3: LLM Response Evaluation**
-- 3 platforms tested (Perplexity, ChatGPT, Gemini)
-- Query taxonomy applied (Evaluative, Comparative, Brand-Specific)
-- Position tracking and citation mapping
-- Browser automation for ChatGPT and Gemini
+- 3 platforms tested: Perplexity, ChatGPT, Gemini
+- **22-24 total queries** (7-8 per platform)
+- Query taxonomy per context/queries/expanded-taxonomy.md:
+  - Evaluative (2): Category rankings, tool recommendations
+  - Comparative (2): Head-to-head, use-case comparisons
+  - Use-Case (2): Problem-solution, specific needs
+  - Brand-Specific (1-2): Reviews, alternatives
+- Position tracking (1-10 or unranked) and citation URL mapping
+- Visibility rate calculated (% of queries where brand appears)
+- Browser automation (Playwright MCP) for ChatGPT and Gemini
 
 **Step 4: Dashboard Synthesis**
-- Cross-step analysis
-- Strategic prioritization
-- Competitive benchmarking
+- Cross-step analysis connecting trust nodes → citations → visibility
+- Strategic recommendations using context/recommendations/templates.md
+- Outreach targets with contact information where applicable
+- Competitive benchmarking with specific competitor source analysis
 
 ---
 
